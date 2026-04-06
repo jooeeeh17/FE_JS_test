@@ -8,3 +8,29 @@
 운영진이 알아보지 못하게 기재하셨을 시 오답처리되는 점 유의바랍니다.
 
 그럼 파이팅~~🦁❤️
+
+
+------
+1. 2번
+2. .textContent
+3. 짝수입니다.
+4. while문: number: 9    / do-while문: number: 9 
+5. flex
+6. lion.addEventListener("road", () => {
+    console.log("자바스크립트 마스터를 해보자!");
+})
+
+7. let answer = 0;
+const isLogin = document.getElementById("isLogin")
+
+isLogin.addEventListener(")
+    if
+isLogin = true;
+
+8.
+9. 
+10. a=new, arr=["old", 10, 233, true, "new"] / b= , arr =[10, 233, true]
+11. appendChild
+12. 
+13.
+14. getElementById,   , 버튼이 클릭됨!
