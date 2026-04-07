@@ -10,27 +10,177 @@
 그럼 파이팅~~🦁❤️
 
 
-------
+------------------------------------------
 1. 2번
-2. .textContent
+
+
+2(오답). 
+cosole.log(fruits[1]);
+
+
++ cosole.log는 콘솔(화면)에 값을 출력해주는 명령어로, cosole.log() 하면 괄호 안에 있는 값을 출력한다.
+배열의 apple이 인덱스 1번이기 때문에 cosole.log(fruits[1]); 을 입력해야한다.
+
+
 3. 짝수입니다.
-4. while문: number: 9    / do-while문: number: 9 
-5. flex
-6. lion.addEventListener("road", () => {
-    console.log("자바스크립트 마스터를 해보자!");
-})
 
-7. let answer = 0;
-const isLogin = document.getElementById("isLogin")
 
-isLogin.addEventListener(")
-    if
-isLogin = true;
+4(오답).
+ while문: 출력값X   / do-while문: number: 9
 
-8.
-9. 
-10. a=new, arr=["old", 10, 233, true, "new"] / b= , arr =[10, 233, true]
+
++ while문은 
+while(조건식) {
+    실행문;
+}
+구조에서 조건문이 참일 때만 반복하는데 해당 문제에서는 num값이 9인데 조건식이 num이 10보다 클 때
+반복하는 것이기 때문에, 애초에 조건이 성립되지 않아서, while문은 출력값이 없다.
+반면에 do-while문은
+do{
+    실행문;
+}while(조건식)
+구조로, 일단 안에 들어있는 실행문이 한 번 실행한 후, 조건문이 참일동안 반복하는 반복문이다.
+그런데 해당 문제에서 나와있는 실행문 안에는 먼저 num값을 콘솔창에 출력해야 한다.
+그래서 number: 9를 출력해줘야 하고, 후에 num값이 8이 된다. while문 옆에 있는 조건식인 num이 10보다 클 때의 조건식은 거짓이므로 반복은 하지 않고 종료한다.
+
+
+5(오답). 
+textContent = count;
+
+
++ 해당 문제 코드에서는 숫자를 1씩 증가하는 코드까진 나타났고, display를 이용해서 화면에 보여줘야한다.
+textContent는 요소의 텍스트만 읽고 쓰는 DOM 메서드로, textContent = count를 입력해서 화면에 증가된 count값을
+표시하라는 의미이다.
+
+
+6(오답). 
+const lion = () => {
+    cosole.log("자바스크립트 마스터를 해보자!)
+}
+lion();
+
+
++ 화살표 함수는 함수 표현식에서 function 키워드 대신 => 를 사용하는 간결한 표현 방식이다.
+const 변수명 = (매개변수) => {
+(...내용...)
+}
+가 되도록 해야하는데 매개변수가 없기 때문에 () 로 표시하여 작성한다.
+
+
+7(오답).
+const answer = isLogin ? "환영합니다!" : "접근 권한이 없습니다.";
+console.log(answer);
+
+
++ 삼항 연산자를 사용하여 isLogin의 값에 따라 다른 내용을 변수 answer에 저장해 콘솔에 띄워줘야 하기 때문에
+삼항 연산자 구조인 / 조건 ? 참일 때 값 : 거짓일 때 값 / 을 이용하여 나타내야 한다.
+즉 isLogin ? "환영합니다!" : "접근 권한이 없습니다.";를 변수 answer에 저장한다
+-> const answer = isLogin ? "환영합니다!" : "접근 권한이 없습니다."
+후에 answer 값을 콘솔 창에 출력해야 하기 때문에 cosole.log(answer);로 나타낸다.
+
+
+
+8(오답).
+let userInput;
+
+do {
+userInput = prompt("무엇을 말하고 싶나요?");
+} while(userInput !== "끝");
+
+
++ 먼저 변수 userInput을 선언한다. -> let userInput;
+do-while문은 
+do {
+    실행문;
+} while(조건식)
+구조인데 해당 문제에서는 사용자가 "끝"을 입력할 때까지(조건식) 알림창을 반복해서 띄워야 하기 때문에(실행문)
+do {
+userInput = prompt("무엇을 말하고 싶나요?");
+} while(userInput !== "끝");
+로 적어준다. 사용자가 입력한 답변을 변수 userInput에 저장을 해야되니까
+userInput = prompt("무엇을 말하고 싶나요?");로 작성해 주는 것.
+그리고 사용자가 끝을 입력할 때까지 반복해야 하니까
+while(userInput !== "끝"); 이라고 표현한다.
+
+
+** 9(오답). 
+let userInput = prompt("숫자를 입력하세요:");
+let num = Number(userInput);
+
+let first = 1;
+let sum = 0;
+
+while (first <= num) {
+  sum += first;
+  first++;
+}
+
+alert("1부터 " + num + "까지의 합은 " + sum + "입니다.");
+
+
++ "숫자를 입력하세요"가 입력창에 보이는 안내문구를 userInput 이라는 값에 저장해준다. (사용자가 입력한 값이 저장됨)
+근데 여기서 예를 들어, 사용자가 10을 입력해도 prompt로 받은 값은 숫자처럼 보여도 문자열이다.
+즉 10이 아니라 "10"으로 저장되는 것!
+문자열을 숫자로 바꿔주기 위해 형변환을 해준다.
+-> let num = number(userInput);
+여기서 Number()는 문자열을 숫자로 바꿔주는 함수이고, 변환한 값을 num에 저장한다.
+
+반복문에서 사용할 변수 first를 만들고, 1부터 더헤주기 위해 처음 값을 1로 정해준다.
+그리고 합계를 저장할 변수 sum을 만들고 0으로 지정한다.
+while문은 조건이 참인 동안 계속 반복하는 문장이기 때문에, first값이 num보다 작거나 같을 때까지
+반복하도록 적어준다. -> while(first <= num) 
+그리고 현재 합계 sum에 현재 숫자 first를 더해서 다시 sum에 저장한다.
+후에 first값을 1 증가시켜서 다음 숫자로 넘어가며 반복문이 돌아가도록 해준다.
+
+
+10(오답). 
+a = 5
+arr = ["old", 10, 233, true, "new"]
+
+b = "old"
+arr = [10, 233, true]
+
+
++ push() 메서드는 배열의 맨 뒤에 새로운 요소를 추가하고, 배열의 새로운 길이를 반환해 준다.
+즉 arr이라는 배열 값 안에는 "new"가 추가 되기 때문에 ["old", 10, 233, true, "new"]가 된다.
+그리고 그 값의 배열이 저장된 a는 배열의 새로운 길이를 반환하기 때문에 정답은 5이다.
+
++ shift() 메서드는 배열의 맨 앞 요소를 삭제하고, 삭제된 요소를 반환해 준다.
+즉 arr이라는 배열 값 안에는 "old"가 삭제된 [10, 233, true]만 남게 되고.
+그 값의 배열이 저장된 b는 배열의 삭제된 요소를 반환하기 때문에 "old"가 출력되게 된다.
+
+
 11. appendChild
-12. 
-13.
-14. getElementById,   , 버튼이 클릭됨!
+
+
+12(오답). 
+점 표기법: person.hobby = "drawing";
+괄호 표기법: person["hobby"] = "drawing";
+
+
+13(오답).
+let count = 1;
+
+function chang() {
+    count++;
+    document.getElementById("name").textContent = "likelion_" + count;
+}
+
+
++ 현재 처음 숫자의 값이 1이기 때문에 변수 count를 만들어서 1을 넣어준다.
+버튼을 클릭하면 숫자가 증가해야 되는 함수를 만들어야 하기 때문에
+function change()를 만들어서, 클릭할 때 실행될 내용을 넣어준다.
+안에 count++; 를 통해서 클릭할 때마다 숫자를 하나씩 증가되도록 하고,
+document.getElementById("name")을 통해 HTMl에서 id가 name인 요소를 가져온다.
+후에 .textContent를 통해 가져온 그 요소 안의 글자를 새로 바꿔준다.
+.textContent = "likelion_" + count; 를 통해서 클릭할 때마다 증가된 숫자 값이 출력되도록 바꿔준다.
+
+
+14(오답). 
+왼쪽 빈칸: getElementById, addEventListener, click
+오른쪽 빈칸: getElementById, onclick
+
+
++ .addEventListener() : 한 요소에 여러 개의 이벤트 핸들러 등록 가능 !
+  .on이벤트이름 : 한 요소에 한 개의 이벤트 핸들러만 등록 가능, 이전에 등록된 이벤트가 덮어씌워질 수 있음
+
